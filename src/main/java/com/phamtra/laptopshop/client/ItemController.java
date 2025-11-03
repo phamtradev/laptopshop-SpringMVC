@@ -130,8 +130,12 @@ public class ItemController {
         if (idOptional.isPresent()) {
             // Fetch product details using the ID
             int id = idOptional.get();
-            Product product = productService.getProductById(id);
-            model.addAttribute("product", product);
+            Optional<Product> productOptional = productService.fetchProductById(id);
+            if (productOptional.isPresent()) {
+                model.addAttribute("product", productOptional.get());
+            } else {
+                model.addAttribute("error", "Product not found");
+            }
         } else {
             // Handle the case where no ID is provided
             model.addAttribute("error", "Product ID is required");

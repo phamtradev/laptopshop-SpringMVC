@@ -2,6 +2,7 @@ package com.phamtra.laptopshop.service;
 
 import com.phamtra.laptopshop.domain.Order;
 import com.phamtra.laptopshop.domain.OrderDetail;
+import com.phamtra.laptopshop.domain.User;
 import com.phamtra.laptopshop.repository.OrderDetailRepository;
 import com.phamtra.laptopshop.repository.OrderRepository;
 import org.springframework.stereotype.Service;
@@ -50,7 +51,7 @@ public class OrderService {
         }
     }
 
-    public void fetchOrderByUser() {
-
+    public List<Order> fetchOrderByUser(User user) {
+        return this.orderRepository.findByUser(user);
     }
 }
