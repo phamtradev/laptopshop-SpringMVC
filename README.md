@@ -1,3 +1,4 @@
+github: @phamtradev. 23633471 Pham Van Tra
 laptopshop Application
 Đây là một dự án ứng dụng web được xây dựng bằng Java và Spring MVC, sử dụng JSP để làm giao diện. Dự án này được thiết kế theo mô hình MVC (Model-View-Controller), giúp tổ chức mã nguồn rõ ràng và dễ mở rộng.
 
